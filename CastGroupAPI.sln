@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastGroupAPI", "CastGroupAPI\CastGroupAPI.csproj", "{3A72515A-69CB-487E-9944-DEED5135C018}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CastGroupAPI", "CastGroupAPI\CastGroupAPI.csproj", "{3A72515A-69CB-487E-9944-DEED5135C018}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{B6B81B86-FF61-4C6E-88C0-1004587E010D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{CF240520-97BE-44C9-816B-0700E89CF6BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{9F9D7E2A-30B7-4D98-A558-333BF06A58FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,17 @@ Global
 		{3A72515A-69CB-487E-9944-DEED5135C018}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A72515A-69CB-487E-9944-DEED5135C018}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A72515A-69CB-487E-9944-DEED5135C018}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F9D7E2A-30B7-4D98-A558-333BF06A58FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F9D7E2A-30B7-4D98-A558-333BF06A58FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F9D7E2A-30B7-4D98-A558-333BF06A58FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F9D7E2A-30B7-4D98-A558-333BF06A58FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3A72515A-69CB-487E-9944-DEED5135C018} = {B6B81B86-FF61-4C6E-88C0-1004587E010D}
+		{9F9D7E2A-30B7-4D98-A558-333BF06A58FE} = {CF240520-97BE-44C9-816B-0700E89CF6BE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C67C778-728C-4C85-A0B9-D0D15B3A4F5D}
