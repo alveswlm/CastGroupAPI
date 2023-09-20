@@ -16,6 +16,9 @@ namespace Application.Services
 
             var response = await client.GetAsync<EnderecoGetResponse>(request) ?? throw new ArgumentException("Ocorreu um erro ao buscar o endereço");
 
+            if (string.IsNullOrEmpty(response.Cep))
+                throw new ArgumentException("Cep inexistente");
+
             return response;
         }
     }
