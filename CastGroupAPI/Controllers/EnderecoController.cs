@@ -1,5 +1,5 @@
-﻿using Application.Contracts.External.Request;
-using Application.Contracts.External.Response;
+﻿using Application.Contracts.External.Endereco.Request;
+using Application.Contracts.External.Endereco.Response;
 using Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 

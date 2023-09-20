@@ -1,4 +1,4 @@
-﻿namespace Application.Contracts.External.Response
+﻿namespace Application.Contracts.External.Endereco.Response
 {
     public class EnderecoGetResponse
     {

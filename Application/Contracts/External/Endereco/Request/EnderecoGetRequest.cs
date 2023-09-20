@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Application.Contracts.External.Request
+namespace Application.Contracts.External.Endereco.Request
 {
     public class EnderecoGetRequest
     {
