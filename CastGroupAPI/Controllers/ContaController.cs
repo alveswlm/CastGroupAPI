@@ -12,5 +12,11 @@ namespace CastGroupAPI.Controllers
 
         public ContaController(IContaService contaService) =>
             _contaService = contaService;
+
+        [HttpPost]
+        public async ValueTask<IActionResult> CriarContaAsync([FromBody] ContaPostRequest contaPostRequest)
+        {
+            return await _contaService.CriarContaAsync(contaPostRequest);
+        }
     }
 }
