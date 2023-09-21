@@ -1,4 +1,5 @@
 using CastGroupAPI.Configurations;
+using CastGroupAPI.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.AdicionarDependencias();
+
+builder.Services.AddTransient<HandlingExceptionMiddleware>();
 
 var app = builder.Build();
 
@@ -23,6 +26,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseMiddleware<HandlingExceptionMiddleware>();
 
 app.MapControllers();
 

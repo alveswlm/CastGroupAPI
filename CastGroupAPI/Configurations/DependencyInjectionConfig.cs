@@ -11,6 +11,7 @@ namespace CastGroupAPI.Configurations
             IServiceCollection services = builder.Services;
 
             services.AddTransient<ContaDbContext>();
+            services.AddTransient<IEnderecoService, EnderecoService>();
             services.AddTransient<IContaService, ContaService>();
 
             return services;
