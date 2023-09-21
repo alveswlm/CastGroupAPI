@@ -32,12 +32,6 @@ namespace Infra.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder
-                .Entity<ContaEntity>(
-                    eb =>
-                    {
-                        eb.HasNoKey();
-                    });
         }
 
         public ContaDbContext() : this(CodeFirstUpdateConnectionString)

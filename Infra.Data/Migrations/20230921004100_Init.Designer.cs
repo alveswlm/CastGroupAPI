@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infra.Data.Migrations
 {
     [DbContext(typeof(ContaDbContext))]
-    [Migration("20230920051057_Init")]
+    [Migration("20230921004100_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -26,15 +26,17 @@ namespace Infra.Data.Migrations
 
             modelBuilder.Entity("Infra.Data.Entities.ContaEntity", b =>
                 {
+                    b.Property<string>("Nome")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
                     b.Property<string>("Descricao")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Nome")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                    b.HasKey("Nome");
 
-                    b.ToTable("Contas");
+                    b.ToTable("Contas", "dbo");
                 });
 #pragma warning restore 612, 618
         }

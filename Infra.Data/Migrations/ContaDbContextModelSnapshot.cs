@@ -23,15 +23,17 @@ namespace Infra.Data.Migrations
 
             modelBuilder.Entity("Infra.Data.Entities.ContaEntity", b =>
                 {
+                    b.Property<string>("Nome")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
                     b.Property<string>("Descricao")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Nome")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                    b.HasKey("Nome");
 
-                    b.ToTable("Contas");
+                    b.ToTable("Contas", "dbo");
                 });
 #pragma warning restore 612, 618
         }

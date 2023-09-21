@@ -1,8 +1,10 @@
 ﻿using Application.Contracts.Internal.Request;
 using Application.Interfaces;
+using Infra.CrossCutting.Response;
 using Infra.Data.Context;
 using Infra.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace Application.Services
 {
@@ -26,7 +28,7 @@ namespace Application.Services
             _dbContext.Add(conta);
             await _dbContext.SaveChangesAsync();
 
-            return (IActionResult)conta;
+            return new ResultObject(HttpStatusCode.OK, conta);
         }
     }
 }
