@@ -13,12 +13,15 @@ namespace Infra.Data.Entities
         [MaxLength(50)]
         public string Descricao { get; set; }
 
-        public ContaEntity() { }
-
         public ContaEntity(string nome, string descricao)
         {
             Nome = nome;
             Descricao = descricao;
+        }
+
+        public ContaEntity(string nome)
+        {
+            Nome = nome;
         }
     }
 }

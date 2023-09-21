@@ -24,5 +24,17 @@ namespace CastGroupAPI.Controllers
         {
             return await _contaService.BuscarContaAsync(contaGetRequest);
         }
+
+        [HttpPut]
+        public async ValueTask<IActionResult> AtualizarContaAsync([FromBody] ContaPutRequest contaPutRequest)
+        {
+            return await _contaService.AtualizarContaAsync(contaPutRequest);
+        }
+
+        [HttpDelete("{nome}")]
+        public async ValueTask<IActionResult> ExcluirContaAsync(string nome)
+        {
+            return await _contaService.ExcluirContaAsync(nome);
+        }
     }
 }

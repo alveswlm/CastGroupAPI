@@ -2,6 +2,6 @@
 {
     public class ContaDeleteRequest
     {
-
+        public string Nome { get; set; }
     }
 }

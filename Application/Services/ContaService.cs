@@ -23,7 +23,7 @@ namespace Application.Services
             _dbContext.Add(conta);
             await _dbContext.SaveChangesAsync();
 
-            return new ResultObject(HttpStatusCode.OK, $"Conta: {conta.Nome} criada com sucesso.");
+            return new ResultObject(HttpStatusCode.OK, $"Conta {conta.Nome} criada com sucesso.");
         }
 
         public async ValueTask<IActionResult> BuscarContaAsync(ContaGetRequest contaGetRequest)
@@ -31,6 +31,26 @@ namespace Application.Services
             var conta = await _dbContext.Contas.Where(c => c.Nome == contaGetRequest.Nome).FirstOrDefaultAsync();
 
             return new ResultObject(HttpStatusCode.OK, conta);
+        }
+
+        public async ValueTask<IActionResult> AtualizarContaAsync(ContaPutRequest contaPutRequest)
+        {
+            var conta = new ContaEntity(contaPutRequest.Nome, contaPutRequest.Descricao);
+
+            _dbContext.Update(conta);
+            await _dbContext.SaveChangesAsync();
+
+            return new ResultObject(HttpStatusCode.OK, $"Descrição da conta {conta.Nome} atualizada com sucesso.");
+        }
+
+        public async ValueTask<IActionResult> ExcluirContaAsync(string nome)
+        {
+            var conta = new ContaEntity(nome);
+
+            _dbContext.Remove(conta);
+            await _dbContext.SaveChangesAsync();
+
+            return new ResultObject(HttpStatusCode.OK, $"Conta {conta.Nome} excluída com sucesso.");
         }
     }
 }
