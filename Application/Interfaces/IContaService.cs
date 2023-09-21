@@ -9,6 +9,8 @@ namespace Application.Interfaces
 
         ValueTask<IActionResult> BuscarContaAsync(ContaGetRequest contaGetRequest);
 
+        ValueTask<IActionResult> ListarContasAsync();
+
         ValueTask<IActionResult> AtualizarContaAsync(ContaPutRequest contaPutRequest);
 
         ValueTask<IActionResult> ExcluirContaAsync(string nome);

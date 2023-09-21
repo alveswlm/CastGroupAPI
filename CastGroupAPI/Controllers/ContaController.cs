@@ -19,10 +19,16 @@ namespace CastGroupAPI.Controllers
             return await _contaService.CriarContaAsync(contaPostRequest);
         }
 
-        [HttpGet]
+        [HttpGet("{nome}")]
         public async ValueTask<IActionResult> BuscarContaAsync([FromQuery] ContaGetRequest contaGetRequest)
         {
             return await _contaService.BuscarContaAsync(contaGetRequest);
+        }
+
+        [HttpGet]
+        public async ValueTask<IActionResult> ListarContasAsync()
+        {
+            return await _contaService.ListarContasAsync();
         }
 
         [HttpPut]

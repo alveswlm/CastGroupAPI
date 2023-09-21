@@ -33,6 +33,13 @@ namespace Application.Services
             return new ResultObject(HttpStatusCode.OK, conta);
         }
 
+        public async ValueTask<IActionResult> ListarContasAsync()
+        {
+            var conta = _dbContext.Contas;
+
+            return new ResultObject(HttpStatusCode.OK, conta);
+        }
+
         public async ValueTask<IActionResult> AtualizarContaAsync(ContaPutRequest contaPutRequest)
         {
             var conta = new ContaEntity(contaPutRequest.Nome, contaPutRequest.Descricao);
