@@ -28,7 +28,7 @@ namespace Application.Services
 
         public async ValueTask<IActionResult> BuscarContaAsync(ContaGetRequest contaGetRequest)
         {
-            var conta = await _dbContext.Contas.Where(c => c.Nome == contaGetRequest.Nome).FirstOrDefaultAsync();
+            var conta = await _dbContext.Contas.FindAsync(contaGetRequest.Nome);
 
             return new ResultObject(HttpStatusCode.OK, conta);
         }

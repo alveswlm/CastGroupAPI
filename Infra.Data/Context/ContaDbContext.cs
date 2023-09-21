@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace Infra.Data.Context
 {
-    public class ContaDbContext : DbContext, IDbContext
+    public class ContaDbContext : DbContext
     {
         private static string _codeFirstUpdateConnectionString;
         private static string CodeFirstUpdateConnectionString
@@ -23,7 +23,7 @@ namespace Infra.Data.Context
             }
         }
 
-        public DbSet<ContaEntity> Contas { get; set; }
+        public virtual DbSet<ContaEntity> Contas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
