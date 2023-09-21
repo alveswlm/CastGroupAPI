@@ -5,6 +5,12 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CastGroupAPI", "CastGroupAPI\CastGroupAPI.csproj", "{3A72515A-69CB-487E-9944-DEED5135C018}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{82526C26-9782-4F69-AD02-AAAE899584B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{9D70C42B-F16E-43B4-87BE-EB7F3906436A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{84C44C0F-D0FB-4E75-8786-51784459C934}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +21,17 @@ Global
 		{3A72515A-69CB-487E-9944-DEED5135C018}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A72515A-69CB-487E-9944-DEED5135C018}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A72515A-69CB-487E-9944-DEED5135C018}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84C44C0F-D0FB-4E75-8786-51784459C934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C44C0F-D0FB-4E75-8786-51784459C934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C44C0F-D0FB-4E75-8786-51784459C934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84C44C0F-D0FB-4E75-8786-51784459C934}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3A72515A-69CB-487E-9944-DEED5135C018} = {82526C26-9782-4F69-AD02-AAAE899584B8}
+		{84C44C0F-D0FB-4E75-8786-51784459C934} = {9D70C42B-F16E-43B4-87BE-EB7F3906436A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C67C778-728C-4C85-A0B9-D0D15B3A4F5D}
