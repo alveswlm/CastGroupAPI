@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Application.Services;
+using Infra.Data.Context;
 
 namespace CastGroupAPI.Configurations
 {
@@ -9,7 +10,9 @@ namespace CastGroupAPI.Configurations
         {
             IServiceCollection services = builder.Services;
 
+            services.AddTransient<ContaDbContext>();
             services.AddTransient<IEnderecoService, EnderecoService>();
+            services.AddTransient<IContaService, ContaService>();
 
             return services;
         }
